@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
   <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -18,6 +19,9 @@
       repo: '',
       loadSidebar: true,
       subMaxLevel: 2,
+      coverpage: true,
+  	  loadNavbar: true,
+      autoHeader: true,
       copyCode: {
         buttonText : '复制内容',
         errorText  : '出错了',
@@ -25,14 +29,29 @@
       },
       toc: {
         scope: '.markdown-section',
-        headings: 'h1,h2,h3,h4,h5,h6',
-        title: '',
+        headings: 'h2,h3,h4,h5,h6',
+        title: '章节标题',
       },
+      plugins: [
+          function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer id="footer">',
+            '<span><a href="https://www.yingqia.com">迎洽AI</a> 版权所有 &copy;2023. </span>',
+            '</footer>'
+          ].join('');
+
+            hook.afterEach(function (html) {
+              return html + footer;
+            });
+          },
+      ]
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://unpkg.com/docsify-copy-code"></script>
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script src="https://unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
 </body>
 </html>
