@@ -1,0 +1,9 @@
+- [首页](/)
+- [资源整理](/souse)
+- [玩机教程]
+	- [电脑](/fun/pc.md)
+	- [手机](/fun/phone.md)
+	- [termux](/fun/termux)
+- [Wordpress]
+	- [浏览器、微信判断](/Wordpress/浏览器、微信判断.md)
+	- [faqun.cn](/Wordpress/faqun.cn.md)
