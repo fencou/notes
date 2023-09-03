@@ -1,5 +1,5 @@
 - [首页](/)
-- [github](/github)
+- [github](/github/)
 - [资源整理](/souse)
 - [玩机教程]
 	- [电脑](/fun/pc.md)
